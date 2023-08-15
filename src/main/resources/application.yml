@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:stockdb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    show-sql: false
+    spring:
+      jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: false
+      settings:
+        trace: false
+        web-allow-others: false
+
+server:
+  port: 8081
+
+application:
+  security:
+    jwt:
+      secret-key: 843F3596C5AE6C2D22C3B47A9C8672F413F4428472B4B6250645367566B5970
+      expiration: 86400000
+  stock:
+    exchange:
+      threshold: 5
+
+
