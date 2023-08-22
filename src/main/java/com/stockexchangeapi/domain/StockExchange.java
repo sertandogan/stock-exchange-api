@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity(name = "stock_exchange")
+@Table(indexes = @Index(columnList = "name"))
 @SequenceGenerator(name = "seq_stock_exchange", sequenceName = "seq_stock_exchange")
 @Getter
 @NoArgsConstructor

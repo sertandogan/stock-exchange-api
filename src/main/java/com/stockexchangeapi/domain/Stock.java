@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+@Table(indexes = @Index(columnList = "name"))
 @Entity(name = "stock")
 @SequenceGenerator(name = "seq_stock", sequenceName = "seq_stock")
 @Getter
